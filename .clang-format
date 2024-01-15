@@ -1,0 +1,125 @@
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+---
+Language: Cpp
+AccessModifierOffset: -4
+AlignAfterOpenBracket: AlwaysBreak
+AlignArrayOfStructures: Right
+AlignConsecutiveDeclarations:
+  Enabled: false
+AlignConsecutiveMacros: AcrossEmptyLines
+AlignEscapedNewlines: Left
+AlignOperands: AlignAfterOperator
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakBeforeMultilineStrings: true
+AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: false
+BinPackParameters: false
+BitFieldColonSpacing: Both
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: true
+  AfterClass: true
+  AfterControlStatement: Always
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: false
+  AfterStruct: true
+  AfterUnion: true
+  AfterExternBlock: true
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeLambdaBody: true
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+BreakAfterAttributes: Leave
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
+ColumnLimit: 100
+Cpp11BracedListStyle: false
+EmptyLineBeforeAccessModifier: LogicalBlock
+FixNamespaceComments: true
+IndentAccessModifiers: false
+IndentCaseBlocks: false
+IndentCaseLabels: false
+IndentWidth: 4
+InsertBraces: true
+InsertNewlineAtEOF: true
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 2
+NamespaceIndentation: None
+PackConstructorInitializers: NextLineOnly
+PointerAlignment: Left
+ReferenceAlignment: Left
+ReflowComments: true
+RemoveSemicolon: true
+SeparateDefinitionBlocks: Always
+ShortNamespaceLines: 0
+SortIncludes: CaseInsensitive
+SortUsingDeclarations: Lexicographic
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon : true
+SpaceBeforeParens: Custom
+SpaceBeforeParensOptions:
+  AfterControlStatements: true
+  AfterFunctionDeclarationName: false
+  AfterFunctionDefinitionName: false
+  AfterOverloadedOperator: true
+  BeforeNonEmptyParentheses: false
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatement: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+Standard: Auto
+TabWidth: 4
+UseTab: Never
+
+IncludeBlocks: Regroup
+IncludeIsMainSourceRegex: '(_p.h)$'
+IncludeCategories:
+  - Regex:        '<c(setjmp|signal|stdarg|stddef|stdlib|stddef|stdlib|time|float|inttypes|limits|stdint|assert|errno|ctype|string|uchar|wchar|wctype|fenv|math|locale|stdio)>' # C-STL
+    Priority:     2
+  - Regex:        '<[^.\/]*>' # STL
+    Priority:     2
+    SortPriority: 3
+  - Regex:        '<(CommandAdapter|Geometry|Graphics|Kernel|VectorDatabase)\/Internal\/.*\.h>' # Core internal header
+    Priority:     100
+  - Regex:        '<(CommandAdapter|Geometry|Graphics|Kernel|VectorDatabase)\/.*\.h>' # Core header
+    Priority:     10
+  - Regex:        '<(algo|Base|Common|Logger)\/Internal\/.*\.h>' # Base internal header
+    Priority:     101
+  - Regex:        '<(algo|Base|Common|Logger)\/.*\.h>' # Base header
+    Priority:     11
+  - Regex:        '<(PointCloud|TriangleMesh|TriangleMeshBuilder)\/Internal\/.*\.h>' # DataStore internal header
+    Priority:     102
+  - Regex:        '<(PointCloud|TriangleMesh|TriangleMeshBuilder)\/.*\.h>' # DataStore header
+    Priority:     12
+  - Regex:        '<(GridDrawable|HpcService|PointCloudEntity|TriangleMeshEntity)\/Internal\/.*\.h>' # Visualization internal header
+    Priority:     103
+  - Regex:        '<(GridDrawable|HpcService|PointCloudEntity|TriangleMeshEntity)\/.*\.h>' # Visualization header
+    Priority:     13
+  - Regex:        '<Perfetto\/.*\.h>'
+    Priority:     7
+  - Regex:        '<OdaCommon.h>'
+    Priority:     5
+  - Regex:        '<.*\.h>' # normal header (e.g. 3rd-party library)
+    Priority:     5
+    SortPriority: 6

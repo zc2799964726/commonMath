@@ -1,0 +1,17 @@
+# https://clangd.llvm.org/config
+
+CompileFlags:
+  Add: [ -Wall, -Wextra, -pedantic, -Werror, -Wno-invalid-token-paste ] # TODO: for "Log.h"
+Diagnostics:
+  UnusedIncludes: Strict
+Completion:
+  AllScopes: Yes
+Index:
+  Background: Build
+InlayHints:
+  Enabled: Yes
+  Designators: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+Hover:
+  ShowAKA: Yes

@@ -1,0 +1,71 @@
+# https://clang.llvm.org/extra/clang-tidy
+# https://clang.llvm.org/extra/clang-tidy/checks/list.html
+
+Checks: [
+  bugprone-*,
+  clang-analyzer-*,
+  concurrency-*,
+  cppcoreguidelines-*,
+  hicpp-*,
+  misc-*,
+  modernize-*,
+  performance-*,
+  portability-*,
+  readability-*,
+
+  cert-msc50-cpp,
+
+  -modernize-use-trailing-return-type
+]
+
+CheckOptions:
+  - { key: cppcoreguidelines-special-member-functions.AllowMissingMoveFunctionsWhenCopyIsDeleted, value: true }
+  - { key: cppcoreguidelines-special-member-functions.AllowSoleDefaultDtor, value: true }
+  - { key: hicpp-signed-bitwise.IgnorePositiveIntegerLiterals, value: true }
+  - { key: hicpp-special-member-functions.AllowMissingMoveFunctionsWhenCopyIsDeleted, value: true }
+  - { key: hicpp-special-member-functions.AllowSoleDefaultDtor, value: true }
+  - { key: misc-const-correctness.AnalyzeValues, value: false }
+  - { key: misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic, value: true }
+  - { key: modernize-use-default-member-init.UseAssignment, value: true }
+  - { key: readability-identifier-naming.ClassCase, value: CamelCase }
+  - { key: readability-identifier-naming.ClassMemberCase, value: camelBack }
+  - { key: readability-identifier-naming.ClassMemberPrefix, value: _ }
+  - { key: readability-identifier-naming.LocalVariableCase, value: camelBack }
+  - { key: readability-identifier-naming.MethodCase, value: camelBack }
+  - { key: readability-identifier-naming.StructCase, value: CamelCase }
+  - { key: readability-identifier-length.IgnoredVariableNames, value: "(db|id|it)" }
+  - { key: readability-qualified-auto.AddConstToQualified, value: true }
+
+FormatStyle: 'file'
+SystemHeaders: false
+UseColor: true
+
+WarningsAsErrors:
+  bugprone-*
+  cert-msc50-cpp
+  cppcoreguidelines-prefer-member-initializer
+  cppcoreguidelines-rvalue-reference-param-not-moved
+  hicpp-signed-bitwise
+  misc-confusable-identifiers
+  misc-definitions-in-headers
+  misc-redundant-expression
+  misc-static-assert
+  misc-unused-*
+  modernize-deprecated-headers
+  modernize-loop-convert
+  modernize-pass-by-value
+  modernize-use-auto
+  modernize-use-equals-default
+  modernize-use-nullptr
+  performance-faster-string-find
+  performance-implicit-conversion-in-loop
+  performance-inefficient-algorithm
+  performance-noexcept-*
+  readability-duplicate-include
+  readability-implicit-bool-conversion
+  readability-static-definition-in-anonymous-namespace
+
+  misc-misleading-bidirectional
+  misc-misleading-identifier
+
+  -bugprone-easily-swappable-parameters
