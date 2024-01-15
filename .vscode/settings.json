@@ -1,0 +1,34 @@
+{
+  "clangd.arguments": [
+    "--clang-tidy",
+    "--completion-style=detailed",
+    "--function-arg-placeholders",
+    "--header-insertion=iwyu",
+    "--pch-storage=disk",
+    "--suggest-missing-includes",
+    "--compile-commands-dir=${workspaceFolder}/.vscode",
+  ],
+  "cmake.copyCompileCommands": "${workspaceFolder}/.vscode/compile_commands.json",
+  "cmake.sourceDirectory": "${workspaceFolder}/source",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  // "editor.inlayHints.enabled": "offUnlessPressed",
+  "files.associations": {
+    ".clangd": "yaml",
+    ".clang-format": "yaml",
+    ".clang-tidy": "yaml"
+  },
+  "files.encoding": "utf8",
+  "files.trimFinalNewlines": false,
+  "files.trimTrailingWhitespace": true,
+  "editor.renderWhitespace": "all",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.tabSize": 4,
+  "git.mergeEditor": true,
+  "search.maxResults": null,
+  "search.quickOpen.includeSymbols": true,
+  "[cmake][json][yaml]": {
+    "editor.tabSize": 2
+  }
+}
