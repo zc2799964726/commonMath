@@ -9,7 +9,7 @@
     "--compile-commands-dir=${workspaceFolder}/.vscode",
   ],
   "cmake.copyCompileCommands": "${workspaceFolder}/.vscode/compile_commands.json",
-  "cmake.sourceDirectory": "${workspaceFolder}/source",
+  "cmake.sourceDirectory": "${workspaceFolder}/",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
