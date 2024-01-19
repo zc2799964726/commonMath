@@ -7,7 +7,6 @@
       "hidden": true,
       "generator": "Visual Studio 17 2022",
       "binaryDir": "${sourceDir}/build/out/${presetName}",
-      "installDir": "${sourceDir}/../SDK",
       "condition": {
         "type": "equals",
         "lhs": "${hostSystemName}",
