@@ -15,10 +15,19 @@ if (WIN32)
   ${PROJECT_SOURCE_DIR}/include
   )
 
-  add_library(CommonManth::CommonManth ALIAS ${PROJECT_NAME})
+  add_library(CommonMath::CommonMath ALIAS ${PROJECT_NAME})
   target_include_directories(${PROJECT_NAME} PUBLIC
-  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
-)
+  ${PROJECT_BINARY_DIR}
+  include
+  )
+
+  include(GenerateExportHeader)
+  generate_export_header(${PROJECT_NAME}
+    EXPORT_FILE_NAME ${PROJECT_BINARY_DIR}/CommonMath/CommonMathExport.h
+  )
+
+  enable_testing()
+  add_subdirectory(Tests)
 
 elseif(LINUX)
   message(FATAL_ERROR "Targeting Linux not implemented")

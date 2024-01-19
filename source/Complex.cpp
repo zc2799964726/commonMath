@@ -1,9 +1,19 @@
 #include <cmath>
 
 #include <Complex.h>
-#include <math.h>
+#include <cmath>
 
 namespace CommonMath {
+
+double Complex::getR() const
+{
+    return R;
+}
+
+double Complex::getI() const
+{
+    return I;
+}
 
 double Complex::cfabs()
 {

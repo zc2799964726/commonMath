@@ -4,14 +4,19 @@
 #include <cmath>
 #include <iostream>
 
+#include <CommonMath/CommonMathExport.h>
+
 namespace CommonMath {
 
-class Complex
+class COMMONMANTH_EXPORT Complex
 {
 public:
     explicit Complex(double real = 0, double imag = 0)
         : R(real), I(imag)
     {}
+
+    double getR() const;
+    double getI() const;
 
     /**
      * @brief 复数的模
