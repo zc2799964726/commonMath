@@ -1,5 +1,5 @@
-#include <Complex.h>
 #include <gtest/gtest.h>
+#include <Complex.h>
 
 class ComplexTest : public ::testing::Test
 {

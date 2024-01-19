@@ -8,7 +8,7 @@
 
 namespace CommonMath {
 
-class COMMONMANTH_EXPORT Complex
+class COMMONMATH_EXPORT Complex
 {
 public:
     explicit Complex(double real = 0, double imag = 0)
