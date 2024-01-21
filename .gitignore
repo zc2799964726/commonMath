@@ -66,20 +66,4 @@ ipch/
 .cache/
 .cxx/
 .idea/
-/source/out
-/source/swiggen
-/source/Android/local.properties
-/source/Android/osmdroid-android/src/main/java/org/osmdroid/OsmdroidBuildInfo.java
-*.gen
-/source/Windows/packages
-/source/Windows/ECAD.Core/ECAD/*.cs
-/source/Windows/ECAD.WPFDemo/VTune Profiler Results
-/source/Windows/ECAD.Wrapper/ecad.wrapper.*
-/source/Windows/*/Properties/*.AssemblyVersion.cs
-.gradle
-*.iml
-/source/ecadWrapper.cxx
-/source/ecadWrapper.h
-/source/Android/ecad/src/main/swiggen/
-/source/Windows/*.psess
-/source/Windows/*.vspx
+out/
