@@ -13,12 +13,6 @@ add_executable(Tests
   TestComplex.cpp
 )
 
-target_include_directories(Tests SYSTEM PRIVATE
-  $<TARGET_PROPERTY:gtest,INCLUDE_DIRECTORIES>
-  # now this line is saved because CommonManth has itself's target_include_directories()
-  # $<TARGET_PROPERTY:CommonMath::CommonMath,INCLUDE_DIRECTORIES>
-)
-
 target_link_libraries(Tests
   gtest
   CommonMath::CommonMath
