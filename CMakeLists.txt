@@ -9,6 +9,7 @@ if (WIN32)
   set(CMAKE_CXX_STANDARD_REQUIRED True)
   add_library(${PROJECT_NAME} SHARED
     "source/Complex.cpp"
+    "source/Poly.cpp"
   )
 
   target_link_directories(${PROJECT_NAME} PUBLIC
